@@ -23,7 +23,6 @@ echo  "$UsedWGIP"
 read -p 'Choose IP in range not listed above:  ' ClientIPaddr
 readonly ClientPrivateKey=$(wg genkey)
 readonly ClientPublicKey=$(echo ${ClientPrivateKey} | wg pubkey)
-echo "Found Servers Public Key:  $ServerPubKey"
 
 readonly PeerFile="/etc/wireguard/peers/"$PeerName".conf"
 readonly WGFile="/etc/wireguard/"$WGInterface".conf"
